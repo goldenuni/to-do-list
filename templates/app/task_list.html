@@ -23,7 +23,7 @@
           <span class="text-muted">Tags: {{ tag.name }}</span>
         {% endfor %}
         <a href="{% url 'todo-list:task-update' pk=task.id %}">Update</a>
-        <a href="#">Delete</a>
+        <a href="{% url 'todo-list:task-delete' pk=task.id %}">Delete</a>
       </p>
       <hr>
     {% endfor %}
