@@ -25,3 +25,11 @@ class TaskUpdateView(generic.UpdateView):
     form_class = TaskForm
     template_name = "app/task_form.html"
     success_url = reverse_lazy("todo-list:task-list")
+
+
+class TaskDoneUpdateView(generic.UpdateView):
+    model = Task
+    fields = ["done"]
+    success_url = reverse_lazy("todo-list:task-list")
+
+
